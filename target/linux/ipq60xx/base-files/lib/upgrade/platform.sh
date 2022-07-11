@@ -11,6 +11,9 @@ platform_check_image() {
 platform_do_upgrade() {
 	case "$(board_name)" in
 	*GL-AX1800* |\
+	cmiot,ax18|\
+	qihoo,v6|\
+	zn,m2|\
 	wf,hr6001)
 		CI_UBIPART="rootfs"
 		nand_do_upgrade "$1"
